@@ -3,24 +3,27 @@ public:
     int maxArea(vector<int>& height) {
         int size = static_cast<int>(std::size(height));
 
-        int area = min(height[0],height[size-1]) * (size-1);
+        int maxArea = min(height[0],height[size-1]) * (size-1);
 
-        int index = size;
+        int currentArea = 0;
 
-        int currentArea;
+        int i = 0;
+        int j = size-1;
 
-        for (int i = 0; i < size; i++) {
-            for (int j = size-1; j >= 0; j--) {
-                
-                currentArea = min(height[i],height[j]) * (j-i);
+        while (i < j) {
+            currentArea = min(height[i],height[j]) * (j-i);
 
+            if (currentArea > maxArea) {
+                maxArea = currentArea;
+            }
 
-                if (currentArea > area) {
-                    area = currentArea;
-                }
+            if (height[i] < height[j]) {
+                i++;
+            } else {
+                j--;
             }
         }
 
-        return area;
+        return maxArea;
     }
 };
