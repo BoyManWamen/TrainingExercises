@@ -1,7 +1,6 @@
 class Solution {
 public:
     vector<vector<int>> getSkyline(vector<vector<int>>& buildings) {
-        
         int edge_idx = 0;
         vector<pair<int, int>> edges;
         priority_queue<pair<int, int>> pq;
