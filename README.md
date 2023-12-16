@@ -1,1 +1,1 @@
-# Training-Exercises
+# TrainingExercises
