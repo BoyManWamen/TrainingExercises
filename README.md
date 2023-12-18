@@ -16,7 +16,6 @@
 
 * [Description](#description)
 * [Installing](#installing)
-* [Executing](#executing-program)
 * [Authors](#authors)
 * [Version History](#version-history)
 * [License](#license)
