@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Huy/Documents/GitHub/TrainingExercises",
-      "program": "c:/Users/Huy/Documents/GitHub/TrainingExercises/build/Debug/outDebug",
+      "cwd": "c:/Users/Huy/Documents/GitHub/TrainingExercises/Neetcode",
+      "program": "c:/Users/Huy/Documents/GitHub/TrainingExercises/Neetcode/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
