@@ -1,32 +1,33 @@
-#include <string>
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        ListNode* current = head;
+        vector<int> numbers;
 
-class Node {
-  public:
-    std::string val;
-    Node* next;
+        while (current != nullptr) {
+            numbers.push_back(current->val);
+            current = current->next;
+        }
 
-    Node(std::string initialVal) {
-      val = initialVal;
-      next = nullptr;
+        reverse(numbers.begin(), numbers.end());
+
+        current = head;
+
+        for (int i = 0; i < numbers.size(); i++) {
+            current->val = numbers[i];
+            current = current->next;
+        }
+
+        return head;
     }
 };
-
-Node* reverseList(Node* head) {
-  Node* previous = nullptr;
-  Node* current = head;
-  
-  while (current != nullptr) {
-    Node* next = current->next;
-    current->next = previous;
-    previous = current;
-    current = next;
-  }
-  
-  return previous;
-}
-
-
-void run() {
-  // this function behaves as `main()` for the 'run' command
-  // you may sandbox in this function, but should not remove it
-}
